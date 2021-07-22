@@ -29,9 +29,9 @@ npm install
 
 cd client
 yarn install
-
-
 ```
+
+Change the MongoDB connection in `routes/new-index.js` to use your connection. You can use a free one from [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
 
 ## Usage
 
