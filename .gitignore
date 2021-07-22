@@ -6,4 +6,4 @@ node_modules
 
 # Additions
 *.bat
-new-index.js
+routes/new-index.js
