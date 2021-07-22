@@ -9,6 +9,8 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
+// Ensure that we are not hard coding our port in server.js, because this will not work up on Azure. 
+// Instead, determine the port
 app.set('port', process.env.PORT || 5000);
 console.log("+++++++++++++++" + app.get('port'));
 
@@ -17,6 +19,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
+// Express serves a static react build in Azure
 app.use(express.static('./client/build'));
 
 app.use('/api/data', require('./routes/new-index.js'))

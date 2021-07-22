@@ -1,8 +1,9 @@
 # Azure-MERN-Boilerplate
+
 A very basic boilerplate for an Azure ready MERN app
 
 The tutorial for deploying this boilerplate can be found here:
-https://medium.com/@tuna.sogut/how-to-deploy-a-mern-stack-app-to-azure-via-continuous-integration-a3a551526e26?sk=0fc4fa9d7c7072ad7e95b94d7e5733e4
+<https://medium.com/@tuna.sogut/how-to-deploy-a-mern-stack-app-to-azure-via-continuous-integration-a3a551526e26?sk=0fc4fa9d7c7072ad7e95b94d7e5733e4>
 
 ## About The Project
 
@@ -22,6 +23,17 @@ https://medium.com/@tuna.sogut/how-to-deploy-a-mern-stack-app-to-azure-via-conti
 
 ### Installation
 
+In the file `routes/new-index.js` change:
+
+```js
+
+// The connection string the database to use your connection. You can create free one from MongoDB Atlas (https://www.mongodb.com/cloud/atlas) and create a database and initial collection.
+var url = "mongodb+srv://<username>:<password>@<cluster>-vgz77.azure.mongodb.net/test?retryWrites=true&w=majority";
+...
+// Update the database name to name of your database.
+  var dbo = db.db("<database>");
+```
+
 ```sh
 cd <repository directory>
 npm install
@@ -29,12 +41,14 @@ npm install
 
 cd client
 yarn install
+npm run build
 ```
 
-Change the MongoDB connection in `routes/new-index.js` to use your connection. You can use a free one from [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
+In the `client` directory, run `npm run build` to build whenever you have made changes.
+
+```
 
 ## Usage
-
 
 ## Roadmap
 
