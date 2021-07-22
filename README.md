@@ -13,7 +13,6 @@ https://medium.com/@tuna.sogut/how-to-deploy-a-mern-stack-app-to-azure-via-conti
 
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/justintungonline/)
 
-
 ## Getting Started
 
 ### Prerequisites
@@ -22,6 +21,17 @@ https://medium.com/@tuna.sogut/how-to-deploy-a-mern-stack-app-to-azure-via-conti
 - yarn
 
 ### Installation
+
+```sh
+cd <repository directory>
+npm install
+# Optionally fix vulnerabilities with npm audit fix
+
+cd client
+yarn install
+
+
+```
 
 ## Usage
 
