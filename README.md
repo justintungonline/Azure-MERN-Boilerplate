@@ -46,7 +46,23 @@ npm run build
 
 In the `client` directory, run `npm run build` to build whenever you have made changes.
 
-```
+Set up a new Azure Web App using Node 12.0 LTS. Follow [the Microsoft tutorial](https://docs.microsoft.com/en-us/azure/app-service/quickstart-nodejs) or using Azure CLI:
+
+```sh
+# Log into Azure
+az login
+
+# Create resource group and set as default values to avoid specifying them each time later
+az group create --name myResourceGroup --location westus
+az config set defaults.group=myResourceGroup defaults.location=westus
+
+# Create an App Service plan using Linux in free tier.
+az appservice plan create --name Azure-MERN-Boilerplate --resource-group myResourceGroup --sku FREE --is-linux
+
+# Create and deploy web app service with Azure CLI command
+# Get run times using command: az webapp list-runtimes --linux
+# Use node 10+ per package-lock.json engines
+az webapp create --name Azure-MERN-Boilerplate --resource-group myResourceGroup --plan Azure-MERN-Boilerplate --runtime "NODE|12-lts" --deployment-source-url https://github.com/justintungonline/Azure-MERN-Boilerplate.git --deployment-source-branch main
 
 ## Usage
 
