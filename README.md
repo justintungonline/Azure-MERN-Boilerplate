@@ -7,7 +7,7 @@ The tutorial for deploying this boilerplate can be found here:
 
 ## About This Repository
 
-It builds on the tutorial above by Tuna Sogut to deploy the MERN boilerplat application to an Azure Web App with two more options:
+It builds on the tutorial above by Tuna Sogut to deploy the MERN boilerplate application to an Azure Web App with two more options:
 
 - [Local git push to remote](https://docs.microsoft.com/en-us/azure/app-service/deploy-local-git?tabs=cli)
 - [Azure DevOps pipelines](https://azure.microsoft.com/en-ca/services/devops/pipelines/)
