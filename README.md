@@ -11,6 +11,7 @@ The tutorial for deploying this boilerplate can be found here:
 
 - [MERN](https://www.mongodb.com/mern-stack)
 - [Node JS](https://nodejs.org/en/)
+- [Microsoft Azure](https://azure.microsoft.com/)
 
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/justintungonline/)
 
@@ -18,8 +19,8 @@ The tutorial for deploying this boilerplate can be found here:
 
 ### Prerequisites
 
-- npm
-- yarn
+- [Yarn](https://classic.yarnpkg.com/en/docs/install#windows-stable)
+- [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/) (optional if you want to create the Azure App Services using command line)
 
 ### Installation
 
@@ -61,8 +62,10 @@ az appservice plan create --name Azure-MERN-Boilerplate --resource-group myResou
 
 # Create and deploy web app service with Azure CLI command
 # Get run times using command: az webapp list-runtimes --linux
-# Use node 10+ per package-lock.json engines
-az webapp create --name Azure-MERN-Boilerplate --resource-group myResourceGroup --plan Azure-MERN-Boilerplate --runtime "NODE|12-lts" --deployment-source-url https://github.com/justintungonline/Azure-MERN-Boilerplate.git --deployment-source-branch main
+az webapp create --name Azure-MERN-Boilerplate --resource-group myResourceGroup --plan Azure-MERN-Boilerplate --runtime "NODE|12-lts"
+```
+
+Follow the rest of [the tutorial regarding deployment to Azure](https://medium.com/@tuna.sogut/how-to-deploy-a-mern-stack-app-to-azure-via-continuous-integration-a3a551526e26?sk=0fc4fa9d7c7072ad7e95b94d7e5733e4).
 
 ## Usage
 
