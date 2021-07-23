@@ -1,6 +1,7 @@
 name: Deploy Node.js to Azure Web App
 
 on:
+# Uncomment the line below to activate the workflow on pushes
 #  [push]
 
 # CONFIGURATION
