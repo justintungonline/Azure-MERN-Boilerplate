@@ -118,13 +118,12 @@ az webapp deployment user set --user-name <username> --password <password>
 # occurs, it may mean the username is taken or password is not complex enough.
 # Choose a different username and more complex password
 
-# For "--deployment-local-git", get new remote git URL from the Azure Web App deployment setting or with:
+# Get new remote git URL from the Azure Web App deployment setting or with:
 az webapp deployment source config-local-git --name Azure-MERN-Boilerplate --resource-group myResourceGroup --query url --output tsv
 
 # Add remote URL to git repo
 git remote add azure <insert URL you got from the previous command>
 
-# For "--deployment-local-git",
 # Push you code to Azure and enter your password from the deployment user set command previously when asked. 
 # Instead of 'main', you may want to choose your branch to push to Azure. 
 # master is required after your local branch to ensure it pushes to the 'master' branch read for Azure deployment
