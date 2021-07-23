@@ -107,7 +107,7 @@ If your code is in GitHub, this option is easiest.
 
 Follow the rest of [the tutorial (3. Setting up Continuous Integration)](https://medium.com/@tuna.sogut/how-to-deploy-a-mern-stack-app-to-azure-via-continuous-integration-a3a551526e26?sk=0fc4fa9d7c7072ad7e95b94d7e5733e4) for deployment to Azure using GitHub integration and GitHub workflows.
 
-Alternatively, follow instructions on how to us the GitHub [webapps-deploy](https://github.com/Azure/webapps-deploy) node.js action which will use a workflow `yaml` like the following:
+Alternatively, follow instructions on how to us the GitHub [webapps-deploy](https://github.com/Azure/webapps-deploy) node.js action which will use a workflow `yaml` like the following. A sample is included in this repository at [`.github/workflows/node.js-webapp-on-azure.yml`](https://github.com/justintungonline/Azure-MERN-Boilerplate/blob/master/.github/workflows/node.js-webapp-on-azure.yml)
 
 ```yaml
 name: Deploy Node.js to Azure Web App
