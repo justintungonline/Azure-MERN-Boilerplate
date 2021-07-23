@@ -7,9 +7,9 @@ The tutorial for deploying this boilerplate can be found here:
 
 ## About This Repository
 
-It builds on the tutorial above by Tuna Sogut to deploy the MERN boilerplate application to an Azure Web App with two more options:
+It builds on the tutorial by Tuna Sogut to describle how to deploy the MERN boilerplate application to an Azure Web App using:
 
-- [Local git push to remote](https://docs.microsoft.com/en-us/azure/app-service/deploy-local-git?tabs=cli)
+- [Local git push to remote](https://docs.microsoft.com/en-us/azure/app-service/deploy-local-git?tabs=cli), or
 - [Azure DevOps pipelines](https://azure.microsoft.com/en-ca/services/devops/pipelines/)
 
 ### Built With
@@ -28,6 +28,8 @@ It builds on the tutorial above by Tuna Sogut to deploy the MERN boilerplate app
 - [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/) (optional if you want to create the Azure App Services using command line)
 
 ### Installation
+
+This section is a summary of key points in the tutorial.
 
 In the file `routes/new-index.js` change:
 
