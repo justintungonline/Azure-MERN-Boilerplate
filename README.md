@@ -103,8 +103,7 @@ az webapp log tail --name Azure-MERN-Boilerplate
 5. Enter your password from the credentials when asked
 6. Go to Pipelines and create a new one using Node JS, Express
 7. When asked, login to Azure and link your Azure Web App with the pipeline.
-
-Sample `pipelines.yaml`:
+8. Adjust the node version and build commands like the following `pipelines.yaml`. These were changes from the auto-generated yaml: `versionSpec: '12.x'` and `runtimeStack: 'NODE|12-lts'` and the `script: |` section.
 
 ```yaml
 # Node.js Express Web App to Linux on Azure
@@ -118,7 +117,7 @@ trigger:
 variables:
 
   # Azure Resource Manager connection created during pipeline creation
-  azureSubscription: '...'
+  azureSubscription: 'fb7f0ac5-01b4-4c6a-9427-6c95079a39ff'
 
   # Web app name
   webAppName: 'Azure-MERN-Boilerplate'
@@ -152,7 +151,7 @@ stages:
         yarn install
         npm run build
       displayName: 'npm install, build and test'
-
+    # Create archive file
     - task: ArchiveFiles@2
       displayName: 'Archive files'
       inputs:
@@ -165,6 +164,7 @@ stages:
     - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
       artifact: drop
 
+# Deploy archive file to Azure Web App
 - stage: Deploy
   displayName: Deploy stage
   dependsOn: Build
