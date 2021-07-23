@@ -37,14 +37,16 @@ In the file `routes/new-index.js` change:
 
 ```js
 
-// The connection string the database to use your connection. You can create free one from MongoDB Atlas (https://www.mongodb.com/cloud/atlas) and create a database and initial collection.
+// The connection string the database to use your connection. 
+// You can create free one from MongoDB Atlas (https://www.mongodb.com/cloud/atlas) 
+// then create a database and initial collection and add a document which the application retrieves.
 var url = "mongodb+srv://<username>:<password>@<cluster>-vgz77.azure.mongodb.net/test?retryWrites=true&w=majority";
 ...
 // Update the database name to name of your database.
   var dbo = db.db("<database>");
 ```
 
-#### Build Application
+#### Build and Run Application
 
 ```sh
 cd <repository directory>
@@ -54,9 +56,13 @@ npm install
 cd client
 yarn install
 npm run build
+
+# Run the application to test it locally
+cd ..
+npm run start
 ```
 
-In the `client` directory, run `npm run build` to build whenever you have made changes.
+In the `client` directory, run `npm run build` to build whenever you have made changes to the React app.
 
 #### Set up new Azure Web App
 
@@ -284,7 +290,7 @@ stages:
 
 ## Usage - Running Locally
 
-Use `npm run start`
+Use `npm run start` in the root of the repository.
 
 ## License
 
