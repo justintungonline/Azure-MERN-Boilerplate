@@ -73,10 +73,11 @@ app.set('port', process.env.PORT || 5000);
 console.log("++++++++++++++++" + app.get('port'));
 
 ...
-// Express to serve up the build created which is how we serve up our frontend up on Azure.
+// Front end is served as a static React build. “npm run build” is run in the client directory 
+// This enables Express to serve up the build, which is how it serves the frontend on Azure.
 app.use(express.static('./client/build'));
 
-// pointe GET/ route in server.js to the index.html in our build.
+// point GET/ route in server.js to the index.html in build.
 app.get("*", (req, res) => {
    res.sendFile(path.resolve(__dirname, "client", "build",     
    "index.html"));
