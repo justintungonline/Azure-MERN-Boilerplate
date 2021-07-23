@@ -138,8 +138,12 @@ git push azure main:master
 4. Use the push to this repository option and push from your local git repository to Azure DevOps repo
 5. Enter your password from the credentials when asked
 6. Go to Pipelines and create a new one using Node JS, Express template
-7. When asked, login to Azure and select your Azure Web App with the pipeline.
-8. Adjust the node version and build commands like the following `pipelines.yaml` below. These were changed from the auto-generated yaml: `versionSpec: '12.x'` and `runtimeStack: 'NODE|12-lts'` and the `script: |` section with the application specific build.
+7. When asked, login to Azure and select your Azure Web App with the pipeline. Behind the scenes, this step https://docs.microsoft.com/en-us/azure/devops/pipelines/library/connect-to-azure?view=azure-devops to your Azure subscription which will allow the pipeline to interact with the Azure resources in the subscription. For production pipelines, it is recommendated to use a service principal (a managed identity) instead of a personal identity.
+8. Azure DevOps will generate a `pipelines.yaml` like the one below.
+9. Verify or Update the node version and build commands to reflect the application. These lines were changed from the auto-generated `yaml`: 
+  1. `versionSpec: '12.x'` 
+  2. `runtimeStack: 'NODE|12-lts'` 
+  3. `script: |` section with the application specific build.
 
 ```yaml
 # Node.js Express Web App to Linux on Azure
