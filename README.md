@@ -84,9 +84,14 @@ app.get("*", (req, res) => {
 });
 
 ```
-Follow the rest of [the tutorial (3. Setting up Continuous Integration)](https://medium.com/@tuna.sogut/how-to-deploy-a-mern-stack-app-to-azure-via-continuous-integration-a3a551526e26?sk=0fc4fa9d7c7072ad7e95b94d7e5733e4) for deployment to Azure using GitHub integration and GitHub workflows.
 
-### Other Deployment Options
+## Usage: How to Deploy to Azure
+
+### Using GitHub Integration
+
+If your code is in GitHub, this option is easiest.
+
+Follow the rest of [the tutorial (3. Setting up Continuous Integration)](https://medium.com/@tuna.sogut/how-to-deploy-a-mern-stack-app-to-azure-via-continuous-integration-a3a551526e26?sk=0fc4fa9d7c7072ad7e95b94d7e5733e4) for deployment to Azure using GitHub integration and GitHub workflows.
 
 #### Use local git to push to Azure remote git which deploys the application
 
@@ -120,9 +125,9 @@ az webapp log tail --name Azure-MERN-Boilerplate
 3. Generate the git credentials and save your username and password
 4. Use the push to this repository option and push from your local git repository to Azure DevOps repo
 5. Enter your password from the credentials when asked
-6. Go to Pipelines and create a new one using Node JS, Express
-7. When asked, login to Azure and link your Azure Web App with the pipeline.
-8. Adjust the node version and build commands like the following `pipelines.yaml`. These were changes from the auto-generated yaml: `versionSpec: '12.x'` and `runtimeStack: 'NODE|12-lts'` and the `script: |` section.
+6. Go to Pipelines and create a new one using Node JS, Express template
+7. When asked, login to Azure and select your Azure Web App with the pipeline.
+8. Adjust the node version and build commands like the following `pipelines.yaml` below. These were changed from the auto-generated yaml: `versionSpec: '12.x'` and `runtimeStack: 'NODE|12-lts'` and the `script: |` section with the application specific build.
 
 ```yaml
 # Node.js Express Web App to Linux on Azure
@@ -208,12 +213,6 @@ stages:
               package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
               startUpCommand: 'npm run start'
 ```
-
-## Usage
-
-## Roadmap
-
-- Azure App Service deployment instructions
 
 ## License
 
