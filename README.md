@@ -150,7 +150,7 @@ stages:
         npm run test --if-present
         cd client
         yarn install
-        npm build run
+        npm run build
       displayName: 'npm install, build and test'
 
     - task: ArchiveFiles@2
