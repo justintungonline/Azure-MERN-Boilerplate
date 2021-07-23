@@ -282,6 +282,10 @@ stages:
               startUpCommand: 'npm run start'
 ```
 
+## Usage - Running Locally
+
+Use `npm run start`
+
 ## License
 
 Distributed under the MIT License
