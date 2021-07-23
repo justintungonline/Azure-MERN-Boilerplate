@@ -65,11 +65,11 @@ az appservice plan create --name Azure-MERN-Boilerplate --resource-group myResou
 az webapp create --name Azure-MERN-Boilerplate --resource-group myResourceGroup --plan Azure-MERN-Boilerplate --runtime "NODE|12-lts"
 ```
 
-Follow the rest of [the tutorial (3. Setting up Continuous Integration)](https://medium.com/@tuna.sogut/how-to-deploy-a-mern-stack-app-to-azure-via-continuous-integration-a3a551526e26?sk=0fc4fa9d7c7072ad7e95b94d7e5733e4) for deployment to Azure
+Follow the rest of [the tutorial (3. Setting up Continuous Integration)](https://medium.com/@tuna.sogut/how-to-deploy-a-mern-stack-app-to-azure-via-continuous-integration-a3a551526e26?sk=0fc4fa9d7c7072ad7e95b94d7e5733e4) for deployment to Azure using GitHub integration and GitHub workflows.
 
-### Alternate Deployment Options
+### Other Deployment Options
 
-#### Using local git to push to Azure remote git
+#### Use local git to push to Azure remote git which deploys the application
 
 ```sh
 # In a separate terminal, set up user-level deployment credentials with Azure CLI
@@ -94,7 +94,7 @@ git push azure main:master
 az webapp log tail --name Azure-MERN-Boilerplate
 ```
 
-#### Using Azure DevOps git to push to Azure
+#### Using Azure DevOps pipelines to deploy to Azure
 
 1. Create a [new Azure DevOps project](https://dev.azure.com).
 2. Go to the Repos menu
