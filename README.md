@@ -90,6 +90,7 @@ console.log("++++++++++++++++" + app.get('port'));
 // This enables Express to serve up the build, which is how it serves the frontend on Azure.
 app.use(express.static('./client/build'));
 
+...
 // point GET/ route in server.js to the index.html in build.
 app.get("*", (req, res) => {
    res.sendFile(path.resolve(__dirname, "client", "build",     
