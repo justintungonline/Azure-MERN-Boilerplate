@@ -118,7 +118,7 @@ trigger:
 variables:
 
   # Azure Resource Manager connection created during pipeline creation
-  azureSubscription: 'fb7f0ac5-01b4-4c6a-9427-6c95079a39ff'
+  azureSubscription: '...'
 
   # Web app name
   webAppName: 'Azure-MERN-Boilerplate'
