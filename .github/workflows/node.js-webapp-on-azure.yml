@@ -1,8 +1,9 @@
 name: Deploy Node.js to Azure Web App
 
 on:
-# Uncomment the line below to activate the workflow on pushes
-#  [push]
+  push:
+    # Change the branch below (e.g. master) to the branch where pushes should activate the workflow
+    branches: [ azure-deploy ]
 
 # CONFIGURATION
 # For help, go to https://github.com/Azure/Actions
