@@ -65,6 +65,24 @@ az appservice plan create --name Azure-MERN-Boilerplate --resource-group myResou
 az webapp create --name Azure-MERN-Boilerplate --resource-group myResourceGroup --plan Azure-MERN-Boilerplate --runtime "NODE|12-lts"
 ```
 
+The tutorial points out several important items in `server.js` that are required for running in Azure:
+
+```js
+// Get port from environment and do not hard code it
+app.set('port', process.env.PORT || 5000);
+console.log("++++++++++++++++" + app.get('port'));
+
+...
+// Express to serve up the build created which is how we serve up our frontend up on Azure.
+app.use(express.static('./client/build'));
+
+// pointr GET/ route in server.js to the index.html in our build.
+app.get("*", (req, res) => {
+   res.sendFile(path.resolve(__dirname, "client", "build",     
+   "index.html"));
+});
+
+```
 Follow the rest of [the tutorial (3. Setting up Continuous Integration)](https://medium.com/@tuna.sogut/how-to-deploy-a-mern-stack-app-to-azure-via-continuous-integration-a3a551526e26?sk=0fc4fa9d7c7072ad7e95b94d7e5733e4) for deployment to Azure using GitHub integration and GitHub workflows.
 
 ### Other Deployment Options
