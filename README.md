@@ -7,10 +7,12 @@ The tutorial for deploying this boilerplate can be found here:
 
 ## About This Repository
 
-It builds on the tutorial by Tuna Sogut to describle how to deploy the MERN boilerplate application to an Azure Web App using:
+It builds on the tutorial by Tuna Sogut by:
 
-- [Local git push to remote](https://docs.microsoft.com/en-us/azure/app-service/deploy-local-git?tabs=cli), or
-- [Azure DevOps pipelines](https://azure.microsoft.com/en-ca/services/devops/pipelines/)
+- Describing two other options to deploy the MERN boilerplate application to an Azure Web App using:
+  - [Local git push to remote](https://docs.microsoft.com/en-us/azure/app-service/deploy-local-git?tabs=cli), or
+  - [Azure DevOps pipelines](https://azure.microsoft.com/en-ca/services/devops/pipelines/)
+- Add Azure CLI method of creating a web app   
 
 ### Built With
 
@@ -42,6 +44,8 @@ var url = "mongodb+srv://<username>:<password>@<cluster>-vgz77.azure.mongodb.net
   var dbo = db.db("<database>");
 ```
 
+#### Build Application
+
 ```sh
 cd <repository directory>
 npm install
@@ -53,6 +57,8 @@ npm run build
 ```
 
 In the `client` directory, run `npm run build` to build whenever you have made changes.
+
+#### Set up new Azure Web App
 
 Set up a new Azure Web App using Node 12.0 LTS. Follow [the Microsoft tutorial](https://docs.microsoft.com/en-us/azure/app-service/quickstart-nodejs) or using Azure CLI:
 
