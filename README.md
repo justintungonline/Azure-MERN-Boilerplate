@@ -107,7 +107,9 @@ If your code is in GitHub, this option is easiest.
 
 Follow the rest of [the tutorial (3. Setting up Continuous Integration)](https://medium.com/@tuna.sogut/how-to-deploy-a-mern-stack-app-to-azure-via-continuous-integration-a3a551526e26?sk=0fc4fa9d7c7072ad7e95b94d7e5733e4) for deployment to Azure using GitHub integration and GitHub workflows.
 
-#### Use local git to push to Azure remote git which deploys the application
+### Using local git to push to Azure remote git which deploys the application
+
+These steps can be done manually or automated.
 
 ```sh
 # In a separate terminal, set up user-level deployment credentials with Azure CLI
@@ -127,12 +129,9 @@ git remote add azure <insert URL you got from the previous command>
 # Instead of 'main', you may want to choose your branch to push to Azure. 
 # master is required after your local branch to ensure it pushes to the 'master' branch read for Azure deployment
 git push azure main:master
-
-# View (tail) logs
-az webapp log tail --name Azure-MERN-Boilerplate
 ```
 
-#### Using Azure DevOps pipelines to deploy to Azure
+### Using Azure DevOps pipelines to deploy to Azure
 
 1. Create a [new Azure DevOps project](https://dev.azure.com).
 2. Go to the Repos menu
