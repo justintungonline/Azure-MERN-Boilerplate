@@ -44,6 +44,7 @@ stages:
         npm run build
       displayName: 'npm install, build and test'
 
+    # Create archive file
     - task: ArchiveFiles@2
       displayName: 'Archive files'
       inputs:
@@ -56,6 +57,7 @@ stages:
     - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
       artifact: drop
 
+# Deploy archive file to Azure Web App
 - stage: Deploy
   displayName: Deploy stage
   dependsOn: Build
