@@ -291,7 +291,7 @@ stages:
 
 ### Run from Zip
 
-Follow [Run your app in Azure App Service directly from a ZIP package](https://docs.microsoft.com/en-us/azure/app-service/deploy-run-package) which mounts the zip file directly to the *wwwroot* directory. 
+Follow [Run your app in Azure App Service directly from a ZIP package](https://docs.microsoft.com/en-us/azure/app-service/deploy-run-package) which mounts the zip file directly to the *wwwroot* directory. Here are [different options to deploy code from a ZIP or WAR file](https://docs.microsoft.com/en-us/azure/app-service/deploy-zip).
 
 There are several benefits to running directly from a package:
 
@@ -300,6 +300,7 @@ There are several benefits to running directly from a package:
 - Can be deployed to a production app (with restart).
 - Improves the performance of Azure Resource Manager deployments.
 - May reduce cold-start times, particularly for JavaScript functions with large npm package trees.
+- By default, the deployment engine assumes that a ZIP file is ready to run as-is and doesn't run any build automation which reduces automation time if work is already done prior to ZIP creation. To enable the same build automation as in a Git deployment, set the SCM_DO_BUILD_DURING_DEPLOYMENT app setting to true.
 
 ## Usage - Running Locally
 
