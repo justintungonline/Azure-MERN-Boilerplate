@@ -289,6 +289,18 @@ stages:
               startUpCommand: 'npm run start'
 ```
 
+### Run from Zip
+
+Follow [Run your app in Azure App Service directly from a ZIP package](https://docs.microsoft.com/en-us/azure/app-service/deploy-run-package) which mounts the zip file directly to the *wwwroot* directory. 
+
+There are several benefits to running directly from a package:
+
+- Eliminates file lock conflicts between deployment and runtime.
+- Ensures only full-deployed apps are running at any time.
+- Can be deployed to a production app (with restart).
+- Improves the performance of Azure Resource Manager deployments.
+- May reduce cold-start times, particularly for JavaScript functions with large npm package trees.
+
 ## Usage - Running Locally
 
 Use `npm run start` in the root of the repository.
