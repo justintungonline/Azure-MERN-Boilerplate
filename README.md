@@ -12,6 +12,7 @@ It builds on the tutorial by Tuna Sogut by:
 - Describing two other options to deploy the MERN boilerplate application to an Azure Web App using:
   - [Local git push to remote](https://docs.microsoft.com/en-us/azure/app-service/deploy-local-git?tabs=cli), or
   - [Azure DevOps pipelines](https://azure.microsoft.com/en-ca/services/devops/pipelines/)
+  - [Deploy and Run directly from a ZIP package](https://docs.microsoft.com/en-us/azure/app-service/deploy-run-package)
 - Add Azure CLI method of creating a web app   
 
 ### Built With
