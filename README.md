@@ -21,7 +21,7 @@ It builds on the tutorial by Tuna Sogut by:
 - [Node JS](https://nodejs.org/en/)
 - [Microsoft Azure](https://azure.microsoft.com/)
 
-[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/justintungonline/)
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/justunsix/)
 
 ## Getting Started
 
@@ -115,7 +115,7 @@ If your code is in GitHub, this option is easiest.
 Follow the rest of [the tutorial (3. Setting up Continuous Integration)](https://medium.com/@tuna.sogut/how-to-deploy-a-mern-stack-app-to-azure-via-continuous-integration-a3a551526e26?sk=0fc4fa9d7c7072ad7e95b94d7e5733e4) for deployment to Azure using GitHub integration and GitHub workflows.
 
 Alternatively, follow instructions on how to us the GitHub [webapps-deploy](https://github.com/Azure/webapps-deploy) node.js action which will use a workflow `yaml` like the following. 
-- In this repository is a sample [`.github/workflows/node.js-webapp-on-azure.yml`](https://github.com/justintungonline/Azure-MERN-Boilerplate/blob/master/.github/workflows/node.js-webapp-on-azure.yml)
+- In this repository is a sample [`.github/workflows/node.js-webapp-on-azure.yml`](https://github.com/justunsix/Azure-MERN-Boilerplate/blob/master/.github/workflows/node.js-webapp-on-azure.yml)
 
 ```yaml
 name: Deploy Node.js to Azure Web App
@@ -203,7 +203,7 @@ git push azure main:master
   2. `runtimeStack: 'NODE|12-lts'` 
   3. `script: |` section with the application specific build.
 
-In this repository is a sample [`azure-pipelines.yml`](https://github.com/justintungonline/Azure-MERN-Boilerplate/blob/master/azure-pipelines.yml).
+In this repository is a sample [`azure-pipelines.yml`](https://github.com/justunsix/Azure-MERN-Boilerplate/blob/master/azure-pipelines.yml).
 
 ```yaml
 # Node.js Express Web App to Linux on Azure
@@ -313,7 +313,7 @@ Distributed under the MIT License
 
 ## Contact
 
-[Justin Tung on GitHub](https://github.com/justintungonline/)
+[Justin Tung on GitHub](https://github.com/justunsix/)
 
 ## Acknowledgements
 
