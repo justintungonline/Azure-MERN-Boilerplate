@@ -10,7 +10,7 @@ router.get('/', (req, res, next) => {
 	MongoClient.connect(url, function(err, db) {
 		if (err) throw err;
 		var dbo = db.db("<database>");
-		dbo.collection("collection1").find({}).toArray(function(err, result) {
+		dbo.collection("Collection1").find({}).toArray(function(err, result) {
 			if (err) throw err;
 			console.log('Mongo data coming in hot')
     		console.log(result);
